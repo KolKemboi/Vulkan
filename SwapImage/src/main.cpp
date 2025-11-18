@@ -97,7 +97,7 @@ private:
   void initWindow() {
     glfwInit();
     if (enableValidationLayers) {
-      std::cout << "Validation Layer Enabled" << std::endl;
+      std::cout << "VALIDATION_LAYERS_ENABLED" << std::endl;
     }
 
     glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
@@ -122,7 +122,7 @@ private:
     }
   }
   void cleanUp() {
-    std::cout << "Cleaning Window" << std::endl;
+    std::cout << "DESTRUCTOR_CLEANING_VULKAN" << std::endl;
 
     vkDestroyDevice(m_Device, NULL);
     vkDestroySurfaceKHR(m_Instance, m_Surface, NULL);
